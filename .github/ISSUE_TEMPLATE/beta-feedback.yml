@@ -1,0 +1,40 @@
+name: Beta feedback
+description: Report a reproducible MacTree beta problem without including private file information.
+title: "[Beta] "
+labels: ["beta-feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include private filenames, paths, file contents, or personal information.
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What happened?
+      description: Describe the visible behavior and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Open MacTree\n2. Choose a test folder\n3. …"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: MacTree version and build
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and Mac architecture
+      placeholder: macOS 14.7, Intel or Apple silicon
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized diagnostic report
+      description: Optional. Use Help > Copy Diagnostic Report and review it before pasting.
